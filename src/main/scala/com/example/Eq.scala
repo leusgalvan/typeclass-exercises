@@ -26,8 +26,8 @@ object Eq {
   implicit val personEq: Eq[Person] = instance[Person]((fst, snd) => fst.name == snd.name && fst.id == snd.id)
 
   // For extra points :)
-  implicit def personEq2(implicit eqInt: Eq[Int], eqString: Eq[String]): Eq[Person] =
-    instance[Person]((fst, snd) => eqString.eq(fst.name, snd.name) && eqInt.eq(fst.id, snd.id))
+  //  implicit def personEq2(implicit eqInt: Eq[Int], eqString: Eq[String]): Eq[Person] =
+  //    instance[Person]((fst, snd) => eqString.eq(fst.name, snd.name) && eqInt.eq(fst.id, snd.id))
 
   // TODO #7: Provide a way to automatically derive instances for Eq[Option[A]] given that we have an implicit
   //          instance for Eq[A]

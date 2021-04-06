@@ -9,15 +9,15 @@ object Person {
     implicit val eqPersonName: Eq[Person] = Eq.instance((fst, snd) => fst.name == snd.name)
 
     // For extra points :)
-    implicit def eqPersonName2(implicit eqString: Eq[String]): Eq[Person] =
-      Eq.instance((fst, snd) => eqString.eq(fst.name, snd.name))
+    //    implicit def eqPersonName2(implicit eqString: Eq[String]): Eq[Person] =
+    //      Eq.instance((fst, snd) => eqString.eq(fst.name, snd.name))
 
     // TODO #10: Define an Eq instance for Person comparing them by id
     //           Extra points: receive an implicit instance for Int and use it
     implicit val eqPersonId: Eq[Person] = Eq.instance((fst, snd) => fst.id == snd.id)
 
     // For extra points :)
-    implicit def eqPersonId2(implicit eqInt: Eq[Int]): Eq[Person] =
-      Eq.instance((fst, snd) => eqInt.eq(fst.id, snd.id))
+    //    implicit def eqPersonId2(implicit eqInt: Eq[Int]): Eq[Person] =
+    //      Eq.instance((fst, snd) => eqInt.eq(fst.id, snd.id))
   }
 }
