@@ -5,12 +5,12 @@ import com.example.Eq
 trait EqLaws[A] {
   def eq: Eq[A]
 
-  // TODO #11: Definir la propiedad 'reflexivity' que chequea que un valor es igual a si mismo
+  // TODO #11: Define a 'reflexivity' property which checks that a value is equal to itself
 
-  // TODO #12: Definir la propiedad 'symmetry' que chequea que la igualdad entre 'x' e 'y' es equivalente a la
-  //           igualdad entre 'y' y 'x'.
+  // TODO #12: Define a 'symmetry' property which checks that when 'x' is equal to 'y' then 'y' is equal to 'x',
+  //           and viceversa
 
-  // TODO #13: Definir la propiedad 'transitivity' que chequea que si 'x' es igual a 'y', e 'y' es igual a 'z',
-  //           entonces 'x' es igual a 'z'.
-  //           PISTA: La proposicion 'Si p entonces q' puede expresarse como !p || q
+  // TODO #13: Define a 'transitivity' property which checks that if 'x' is equal to 'y' and 'y' is equal to 'z'
+  //           then 'x' is equal to 'z'
+  //           Hint: The proposition 'IF p THEN q' can be stated as 'NOT p OR q'
 }

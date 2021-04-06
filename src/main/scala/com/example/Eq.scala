@@ -1,31 +1,27 @@
 package com.example
 
-/**
- * Typeclass implementada por tipos que tengan una nocion de igualdad.
- *
- * eq(a, b) quiere decir que a es igual a b bajo esta definicion de igualdad.
- */
 trait Eq[A] {
-  // TODO #1: Defina un metodo 'eq' que tome como argumentos dos valores a comparar y devuelva un Boolean
+  // TODO #1: Define an 'eq' method that takes two A values as parameters, and returns a Boolean
 }
 
 object Eq {
-  // TODO #2: defina un metodo 'apply' que permita traer instancias presentes del scope implicito ('summoner').
+  // TODO #2: Define the method 'apply' so we can summon instances from implicit scope
 
-  // TODO #3: Defina un metodo 'instance' para facilitar la creacion de instancias; debe tomar como unico
-  //          argumento una funcion.
+  // TODO #3: Define the method 'instance' so we can build instances of the Eq typeclass more easily.
+  //          It should take as the only parameter a function of type (A, A) => Boolean
 
-  // TODO #4: Defina una instancia de Eq para String
+  // TODO #4: Define an Eq instance for String
 
-  // TODO #5: Defina una instancia de Eq para Int
+  // TODO #5: Define an Eq instance for Int
 
-  // TODO #6: Defina una instancia de Eq para Person que las compare por ambos campos
-  // Puntos extra: permitir que se pueda indicar como implicits las instancias de Eq para Int y String
+  // TODO #6: Define an Eq instance for Person. Two persons are equal if both their names and ids are equal.
+  //          Extra points: receive implicit instances for String and Int and use them
 
-  // TODO #7: Provea una forma de obtener instancias de Eq[Option[A]] donde A tiene una instancia de Eq.
+  // TODO #7: Provide a way to automatically derive instances for Eq[Option[A]] given that we have an implicit
+  //          instance for Eq[A]
 
   object Syntax {
-    // TODO #8: Provea una clase EqOps y dentro un metodo 'eqTo' que permita utilizar expresiones como
-    //          "hola".eqTo("chau")
+    // TODO #8: Define a class 'EqOps' with a method 'eqTo' that enables the following syntax:
+    //          "hello".eqTo("world")
   }
 }
