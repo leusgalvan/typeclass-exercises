@@ -8,8 +8,7 @@ import org.typelevel.discipline.Laws
 trait EqTests[A] extends Laws {
   def laws: EqLaws[A]
 
-  // TODO #14: Declare un RuleSet que contenga las 3 leyes provistas en los ejercicios #11 - #13 en forma
-  //           de propiedades de scalacheck
+  // TODO #14: Define a RuleSet containing the laws in EqLaws
   def eq(implicit arb: Arbitrary[A]): RuleSet = new DefaultRuleSet(
     name = "eq",
     parent = None,

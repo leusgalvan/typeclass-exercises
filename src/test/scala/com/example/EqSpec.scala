@@ -4,9 +4,8 @@ import com.example.laws.EqLaws
 import com.example.laws.discipline.EqTests
 
 class EqSpec extends MySpec {
-  // TODO #15: Escriba tests utilizando checkAll para todas
-  //           las instancias definidas en el objeto Eq (Int, String y Person)
-
+  // TODO #15: Write tests for every Eq instance (Int, String and Person)
+  //           using Discipline and the 'checkAll' method
   object IntEqTests extends EqTests[Int] {
     override def laws: EqLaws[Int] = new EqLaws[Int] {
       override def eq: Eq[Int] = Eq.intEq
